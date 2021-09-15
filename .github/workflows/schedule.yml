@@ -5,7 +5,7 @@ on:
     branches: master
 
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "*/6 * * * *"
 
 jobs:
   update-gist:
@@ -18,5 +18,5 @@ jobs:
         run: node ./index.js
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: 97b738c515448231e85fc48014be5b3b
+          GIST_ID: 15f429cacc515023421a301d9c11b5fd
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
